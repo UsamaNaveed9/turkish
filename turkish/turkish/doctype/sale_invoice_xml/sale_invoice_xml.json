@@ -1,0 +1,182 @@
+{
+ "autoname": "field:invoice_no",
+ "creation": "2021-12-07 18:35:04.693186",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "import_xml_file",
+  "file",
+  "process_file",
+  "invoice_detail_section",
+  "customer_name",
+  "vendor_name",
+  "invoice_no",
+  "column_break_7",
+  "invoice_date",
+  "expiry_date",
+  "exchange_section",
+  "from_currency",
+  "to_currency",
+  "column_break_4",
+  "calculation_rate",
+  "item_details_section",
+  "invoice_line",
+  "section_break_8",
+  "sub_total",
+  "column_break_11",
+  "kdv_percentage",
+  "kdv_amount",
+  "kdv_per",
+  "kdv_a",
+  "grand_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "import_xml_file",
+   "fieldtype": "Section Break",
+   "label": "Import XML File"
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "fieldname": "process_file",
+   "fieldtype": "Button",
+   "label": "Process file"
+  },
+  {
+   "fieldname": "invoice_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Detail"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "label": "Vendor Name"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "exchange_section",
+   "fieldtype": "Section Break",
+   "label": "Exchange"
+  },
+  {
+   "fieldname": "from_currency",
+   "fieldtype": "Data",
+   "label": "From Currency"
+  },
+  {
+   "fieldname": "to_currency",
+   "fieldtype": "Data",
+   "label": "To Currency"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calculation_rate",
+   "fieldtype": "Float",
+   "label": "Calculation Rate"
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "invoice_line",
+   "fieldtype": "Table",
+   "label": "Invoice Line",
+   "options": "InvoiceLine"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kdv_percentage",
+   "fieldtype": "Percent",
+   "label": "KDV Percentage"
+  },
+  {
+   "fieldname": "kdv_amount",
+   "fieldtype": "Currency",
+   "label": "KDV Amount"
+  },
+  {
+   "fieldname": "kdv_per",
+   "fieldtype": "Percent",
+   "label": "KDV Percentage"
+  },
+  {
+   "fieldname": "kdv_a",
+   "fieldtype": "Currency",
+   "label": "KDV Amount"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  }
+ ],
+ "modified": "2021-12-07 18:51:57.247583",
+ "modified_by": "Administrator",
+ "module": "Turkish",
+ "name": "Sale Invoice XML",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
