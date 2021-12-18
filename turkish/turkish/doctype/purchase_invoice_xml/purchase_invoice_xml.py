@@ -85,7 +85,16 @@ def parse_xml(xml_file):
 				invoice_data['sub_total']= total	
 			if second.tag=="{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}PayableAmount":
 				grand_total= second.text
-				invoice_data['grand_total'] = grand_total	
+				currencyid = second.attrib['currencyID']
+				invoice_data['grand_total'] = grand_total
+
+	if currencyid=="TRY":
+		symbol = "₺"
+	elif currencyid=="USD":
+		symbol = "$"
+	elif currencyid=="EUR":
+		symbol = "€"
+	invoice_data['symbol'] = symbol					
 
 	for supplier in root.find("{urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2}AccountingSupplierParty"):
 		for party in supplier:
@@ -114,5 +123,6 @@ def parse_xml(xml_file):
 			invoice_kdv_data_copy = invoice_kdv_data.copy()
 			final_kdv_data.append(invoice_kdv_data_copy)
 	#print(final_kdv_data)
+
 
 	return invoice_line_data, invoice_data, final_kdv_data

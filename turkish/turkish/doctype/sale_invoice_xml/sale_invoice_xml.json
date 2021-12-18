@@ -20,6 +20,7 @@
   "to_currency",
   "column_break_4",
   "calculation_rate",
+  "symbol",
   "item_details_section",
   "invoice_line",
   "section_break_8",
@@ -123,7 +124,7 @@
   },
   {
    "fieldname": "sub_total",
-   "fieldtype": "Currency",
+   "fieldtype": "Data",
    "label": "Sub Total"
   },
   {
@@ -137,7 +138,7 @@
   },
   {
    "fieldname": "kdv_amount",
-   "fieldtype": "Currency",
+   "fieldtype": "Data",
    "label": "KDV Amount"
   },
   {
@@ -147,16 +148,21 @@
   },
   {
    "fieldname": "kdv_a",
-   "fieldtype": "Currency",
+   "fieldtype": "Data",
    "label": "KDV Amount"
   },
   {
    "fieldname": "grand_total",
-   "fieldtype": "Currency",
+   "fieldtype": "Data",
    "label": "Grand Total"
+  },
+  {
+   "fieldname": "symbol",
+   "fieldtype": "Data",
+   "label": "Symbol"
   }
  ],
- "modified": "2021-12-07 18:51:57.247583",
+ "modified": "2021-12-16 17:53:54.812356",
  "modified_by": "Administrator",
  "module": "Turkish",
  "name": "Sale Invoice XML",

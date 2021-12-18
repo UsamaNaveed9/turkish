@@ -85,8 +85,17 @@ def parse_xml(xml_file):
 				invoice_data['sub_total']= total	
 			if second.tag=="{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}PayableAmount":
 				grand_total= second.text
+				currencyid = second.attrib['currencyID']
 				invoice_data['grand_total'] = grand_total	
 
+	if currencyid=="TRY":
+		symbol = "₺"
+	elif currencyid=="USD":
+		symbol = "$"
+	elif currencyid=="EUR":
+		symbol = "€"
+	invoice_data['symbol'] = symbol
+	
 	for supplier in root.find("{urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2}AccountingSupplierParty"):
 		for party in supplier:
 			for party_name in party:
